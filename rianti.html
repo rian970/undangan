@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Invitation | Pond & Rianti</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #edf8ff;
+  color: #45677f;
+  line-height: 1.8;
+}
+
+section {
+  padding: 75px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.title {
+  color: #438bb9;
+  font-size: 35px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: auto;
+  color: #66849a;
+}
+
+/* COVER */
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  background:
+  linear-gradient(rgba(30,75,110,.48),
+  rgba(30,90,130,.65)),
+  url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80")
+  center/cover;
+}
+
+.cover-content {
+  padding: 30px;
+  max-width: 650px;
+}
+
+.cover h1 {
+  font-size: 55px;
+  font-weight: normal;
+  margin: 15px 0;
+}
+
+.cover p {
+  font-size: 17px;
+}
+
+.date {
+  font-size: 21px;
+  margin: 20px 0;
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #66b5e5;
+  color: white;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #348fc5;
+  transform: translateY(-3px);
+}
+
+/* MEMPELAI */
+
+.couple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.person {
+  width: 280px;
+}
+
+.person img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 7px solid white;
+  box-shadow: 0 5px 20px #8bc9e855;
+}
+
+.person h3 {
+  color: #438bb9;
+  font-size: 27px;
+  margin-top: 15px;
+}
+
+.and {
+  font-size: 40px;
+  color: #66b5e5;
+}
+
+/* EVENT */
+
+.event {
+  background: #dff1fc;
+}
+
+.event-box {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 35px 25px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 5px 25px #77b6df22;
+}
+
+.event-box h3 {
+  color: #438bb9;
+  font-size: 24px;
+}
+
+.event-item {
+  margin: 20px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #d7eaf6;
+}
+
+/* COUNTDOWN */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.time-box {
+  width: 85px;
+  padding: 15px 5px;
+  background: #66b5e5;
+  color: white;
+  border-radius: 13px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* RSVP */
+
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0 15px;
+  border: 1px solid #b7dced;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #45677f;
+  background: white;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+form .btn {
+  width: 100%;
+}
+
+/* MUSIC */
+
+.music-button {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 30px;
+  background: #438fbd;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 4px 15px #0003;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px;
+  background: #438bb9;
+  color: white;
+  text-align: center;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+  .cover h1 {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 29px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery img {
+    height: 155px;
+  }
+
+  .and {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIK -->
+<audio id="weddingMusic" loop>
+  <source src="c:\Users\kasir\Downloads\the_mountain-wedding-522480 (2).mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-button" id="musicButton">
+  ▶ Putar Musik
+</button>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-content">
+    <p>THE WEDDING OF</p>
+
+    <h1>Pond & Rianti</h1>
+
+    <div class="date">
+      Minggu, 20 Desember 2026
+    </div>
+
+    <p>
+      Dengan penuh kebahagiaan,
+      kami mengundang Bapak/Ibu/Saudara/i
+      untuk hadir di acara pernikahan kami.
+    </p>
+
+    <a href="#undangan" class="btn">
+      Buka Undangan ♡
+    </a>
+  </div>
+</section>
+
+<!-- PEMBUKA -->
+<section id="undangan">
+  <div class="container">
+    <h2 class="title">
+      Assalamu'alaikum Warahmatullahi Wabarakatuh
+    </h2>
+
+    <p class="subtitle">
+      Maha Suci Allah yang telah menciptakan
+      makhluk-Nya berpasang-pasangan.
+
+      Dengan memohon rahmat dan ridho Allah SWT,
+      kami bermaksud menyelenggarakan
+      acara pernikahan kami.
+    </p>
+  </div>
+</section>
+
+<!-- MEMPELAI -->
+<section>
+  <div class="container">
+    <h2 class="title">Kedua Mempelai</h2>
+
+    <div class="couple">
+
+      <div class="person">
+        <img src="my suami.jpg" alt="Pond Naravit">
+
+        <h3>Pond Naravit</h3>
+
+        <p>
+          Putra pertama dari<br>
+          Bapak Ahmad & Ibu Sari
+        </p>
+      </div>
+
+      <div class="and">&</div>
+
+      <div class="person">
+        <img src="saya.jpg" alt="Rianti Oktavia">
+
+        <h3>Rianti Oktavia</h3>
+
+        <p>
+          Putri kedua dari<br>
+          Bapak Budi & Ibu Lina
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="event">
+  <div class="container">
+    <h2 class="title">Menuju Hari Bahagia</h2>
+
+    <p>Our Special Day ♡</p>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <span id="days">0</span>
+        <small>Hari</small>
+      </div>
+
+      <div class="time-box">
+        <span id="hours">0</span>
+        <small>Jam</small>
+      </div>
+
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <small>Menit</small>
+      </div>
+
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <small>Detik</small>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL ACARA -->
+<section>
+  <div class="container">
+    <h2 class="title">Detail Acara</h2>
+
+    <div class="event-box">
+
+      <div class="event-item">
+        <h3>Akad Nikah</h3>
+        <p>Minggu, 20 Desember 2026</p>
+        <p>08.00 - 10.00 WIB</p>
+      </div>
+
+      <hr>
+
+      <div class="event-item">
+        <h3>Resepsi</h3>
+        <p>Minggu, 20 Desember 2026</p>
+        <p>11.00 - 14.00 WIB</p>
+      </div>
+
+      <hr>
+
+      <div class="event-item">
+        <h3>Gedung Pernikahan Bahagia</h3>
+        <p>Jl. Kebahagiaan No. 123, Jakarta</p>
+
+        <a
+          href="https://maps.google.com/?q=Jakarta"
+          target="_blank"
+          rel="noopener"
+          class="btn">
+          Lihat Lokasi
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="event">
+  <div class="container">
+    <h2 class="title">Our Gallery</h2>
+
+    <p class="subtitle">
+      A little collection of our beautiful memories ♡
+    </p>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80" alt="Foto 1">
+
+      <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=700&q=80" alt="Foto 2">
+
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" alt="Foto 3">
+
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Foto 4">
+
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Foto 5">
+
+      <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=700&q=80" alt="Foto 6">
+
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section>
+  <div class="container">
+
+    <h2 class="title">RSVP</h2>
+
+    <p class="subtitle">
+      Konfirmasi kehadiran dan berikan doa terbaik
+      untuk kedua mempelai.
+    </p>
+
+    <form id="rsvpForm">
+
+      <label>Nama</label>
+      <input
+        type="text"
+        id="nama"
+        placeholder="Masukkan nama kamu"
+        required>
+
+      <label>Konfirmasi Kehadiran</label>
+      <select id="kehadiran" required>
+        <option value="">Pilih kehadiran</option>
+        <option value="Hadir">Saya akan hadir</option>
+        <option value="Tidak Hadir">Maaf, saya tidak bisa hadir</option>
+      </select>
+
+      <label>Ucapan & Doa</label>
+      <textarea
+        id="ucapan"
+        placeholder="Tuliskan ucapan terbaikmu...">
+      </textarea>
+
+      <button class="btn" type="submit">
+        Kirim Konfirmasi ♡
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+<section class="event">
+  <div class="container">
+    <h2 class="title">Terima Kasih</h2>
+
+    <p class="subtitle">
+      Merupakan suatu kehormatan dan kebahagiaan
+      bagi kami apabila Bapak/Ibu/Saudara/i
+      berkenan hadir dan memberikan doa restu.
+    </p>
+
+    <br>
+
+    <h2 style="color:#438bb9">
+      Pond & Rianti ♡
+    </h2>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Pond & Rianti</p>
+  <p>Made with love ♡</p>
+</footer>
+
+<script>
+
+// MUSIK
+const music = document.getElementById("weddingMusic");
+const musicButton = document.getElementById("musicButton");
+
+musicButton.addEventListener("click", async () => {
+  try {
+    if (music.paused) {
+      await music.play();
+      musicButton.textContent = "⏸ Jeda Musik";
+    } else {
+      music.pause();
+      musicButton.textContent = "▶ Putar Musik";
+    }
+  } catch (error) {
+    alert("Periksa file musik.mp3 kamu!");
+  }
+});
+
+
+// COUNTDOWN
+const weddingDate = new Date(
+  "2026-12-20T08:00:00+07:00"
+).getTime();
+
+function updateCountdown() {
+  const distance = weddingDate - Date.now();
+
+  if (distance <= 0) {
+    ["days", "hours", "minutes", "seconds"].forEach(id => {
+      document.getElementById(id).textContent = "0";
+    });
+    return;
+  }
+
+  document.getElementById("days").textContent =
+    Math.floor(distance / 86400000);
+
+  document.getElementById("hours").textContent =
+    Math.floor(distance / 3600000) % 24;
+
+  document.getElementById("minutes").textContent =
+    Math.floor(distance / 60000) % 60;
+
+  document.getElementById("seconds").textContent =
+    Math.floor(distance / 1000) % 60;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+// RSVP WHATSAPP
+document.getElementById("rsvpForm")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const nama =
+    document.getElementById("nama").value.trim();
+
+  const kehadiran =
+    document.getElementById("kehadiran").value;
+
+  const ucapan =
+    document.getElementById("ucapan").value.trim();
+
+  // GANTI NOMOR INI DENGAN NOMOR WHATSAPP TUJUAN
+  const nomorWhatsApp = "6281234567890";
+
+  const pesan =
+    `Halo, saya ${nama}.\n\n` +
+    `Kehadiran: ${kehadiran}\n\n` +
+    `Ucapan: ${ucapan || "-"}`;
+
+  const url =
+    "https://wa.me/" + nomorWhatsApp +
+    "?text=" + encodeURIComponent(pesan);
+
+  window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
